@@ -67,6 +67,6 @@ app.get(`/filament/:id`, (req, res) => {
 
 
 // Listen
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log(`Listening to port ${PORT}`);
 });
