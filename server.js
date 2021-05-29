@@ -85,6 +85,13 @@ app.put(`/filament/:id`, (req, res) => {
         res.redirect('/filament');
 })});
 
+// Delete
+app.delete('/filament/:id', (req, res) => {
+    Filament.findByIdAndRemove(req.params.id, (error, foundFilament) => {
+      res.redirect('/filament');
+    });
+  });
+
 // Listen
 app.listen(PORT, () => {
     console.log(`Listening to port ${PORT}`);

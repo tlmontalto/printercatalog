@@ -9,19 +9,19 @@
 <body>
     <h1>Edit Filament:</h1>
     <form action="/filament/<%= filament.id %>?_method=PUT" method="POST">
-        Type: <input type="text" name="type" id="type">
+        Type: <input type="text" name="type" id="type" value="<%= filament.type %>">
 </br>
-        Brand: <input type="text" name="brand" id="brand">
+        Brand: <input type="text" name="brand" id="brand" value="<%= filament.brand %>">
 </br>
-        Color: <input type="text" name="color" id="color">
+        Color: <input type="text" name="color" id="color" value="<%= filament.color %>">
 </br>
-        Image Link: <input type="text" name="img" id="img">
+        Image Link: <input type="text" name="img" id="img" value="<%= filament.img %>">
 </br>
-        Temperature: <input type="text" name="temperature" id="temperature">
+        Temperature: <input type="text" name="temperature" id="temperature" value="<%= filament.temperature %>">
 </br>
-        Speed: <input type="text" name="speed" id="speed">
+        Speed: <input type="text" name="speed" id="speed" value="<%= filament.speed %>">
 </br>
-        Shop Link: <input type="text" name="link" id="link"> 
+        Shop Link: <input type="text" name="link" id="link" value="<%= filament.link %>"> 
 <br>
         <input type="submit" value="Save Changes">
       </form>

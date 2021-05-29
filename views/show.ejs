@@ -15,7 +15,7 @@
 </br>
         Color: <%= filament.color %>
 </br>
-        Img: <%= filament.img %>
+        <img src="<%= filament.img %>">
 </br>
         Temperature: <%= filament.temperature %>
 </br>
@@ -23,6 +23,9 @@
 </br>
         Link: <%= filament.link %>
     </p>
+    <form action="/filament/<%= filament.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE">
+      </form>
     <a href="/filament">Back</a>
 </body>
 </html>
