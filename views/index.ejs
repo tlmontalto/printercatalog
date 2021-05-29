@@ -9,7 +9,9 @@
 <body>
     <h1>filament index here</h1>
     <a href="/filament/new">Create New Filament</a>
+</br>
     <% for (let i = 0; i < filament.length; i++) { %>
+        <a href="/filament/<%= filament[i].id %>">Details</a>
         <p>
             Type: <%= filament[i].type %>
 </br>

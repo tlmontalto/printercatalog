@@ -62,7 +62,11 @@ app.post(`/filament`, (req, res) => {
 
 // Display Page
 app.get(`/filament/:id`, (req, res) => {
-    res.send(`Filament details here.`);
+    Filament.findById(req.params.id, (error, foundFilament) => {
+        res.render('show.ejs', {
+          filament: foundFilament
+        });
+    });
 });
 
 
