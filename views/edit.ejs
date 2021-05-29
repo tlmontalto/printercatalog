@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Create New Filament</title>
+    <title>Edit Filament</title>
 </head>
 <body>
-    <h1>Add New Filament:</h1>
-    <form action="/filament", method="POST">
+    <h1>Edit Filament:</h1>
+    <form action="/filament/<%= filament.id %>?_method=PUT" method="POST">
         Type: <input type="text" name="type" id="type">
 </br>
         Brand: <input type="text" name="brand" id="brand">
@@ -23,7 +23,7 @@
 </br>
         Shop Link: <input type="text" name="link" id="link"> 
 <br>
-        <input type="submit" value="Add Filament">
+        <input type="submit" value="Save Changes">
       </form>
       <a href="/filament">Back</a>
 </body>

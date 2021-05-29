@@ -10,22 +10,22 @@
     <h1>filament index here</h1>
     <a href="/filament/new">Create New Filament</a>
 </br>
-    <% for (let i = 0; i < filament.length; i++) { %>
-        <a href="/filament/<%= filament[i].id %>">Details</a>
+    <% for (let i = 0; i < filaments.length; i++) { %>
+        <a href="/filament/<%= filaments[i].id %>">Details</a>
         <p>
-            Type: <%= filament[i].type %>
+            Type: <%= filaments[i].type %>
 </br>
-            Brand: <%= filament[i].brand %>
+            Brand: <%= filaments[i].brand %>
 </br>
-            Color: <%= filament[i].color %>
+            Color: <%= filaments[i].color %>
 </br>
-            Img: <%= filament[i].img %>
+            Img: <%= filaments[i].img %>
 </br>
-            Temperature: <%= filament[i].temperature %>
+            Temperature: <%= filaments[i].temperature %>
 </br>
-            Speed: <%= filament[i].speed %>
+            Speed: <%= filaments[i].speed %>
 </br>
-            Link: <%= filament[i].link %>
+            Link: <%= filaments[i].link %>
         </p>
     <% } %>
 </body>

@@ -15,14 +15,15 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ 'fi
 app.use(express.static('public'));
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
+app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 // Mongoose Middleware
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true,
+mongoose.connect(MONGODB_URI, {
+useNewUrlParser: true,
 useUnifiedTopology: true,
 useFindAndModify: false });
 mongoose.connection.once('open', () => {
@@ -40,10 +41,10 @@ db.on('open' , ()=>{});
 const Filament = require('./models/filament.js')
 
 // Index
-app.get('/filament', (req, res) => {
+app.get(`/filament`, (req, res) => {
     Filament.find({}, (error, allFilament) => {
       res.render('index.ejs', {
-        filament: allFilament
+        filaments: allFilament
       });
     });
   });
@@ -62,13 +63,27 @@ app.post(`/filament`, (req, res) => {
 
 // Display Page
 app.get(`/filament/:id`, (req, res) => {
-    Filament.findById(req.params.id, (error, foundFilament) => {
+    Filament.findById(req.params.id, (error, showFilament) => {
         res.render('show.ejs', {
-          filament: foundFilament
+          filament: showFilament
         });
     });
 });
 
+// Edit
+app.get(`/filament/:id/edit`, (req, res) => {
+    Filament.findById(req.params.id, (error, foundFilament) => {
+      res.render('edit.ejs', {
+        filament: foundFilament
+      });
+    });
+});
+
+// Put Edits
+app.put(`/filament/:id`, (req, res) => {
+    Filament.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedFilament) => {
+        res.redirect('/filament');
+})});
 
 // Listen
 app.listen(PORT, () => {
