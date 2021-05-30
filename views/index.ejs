@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
     <title>Filament | Index</title>
 </head>
 <body>
-    <h1>filament index here</h1>
-    <a href="/filament/new">Create New Filament</a>
+    <h1>Filament Index</h1>
+    <a id="create-new" href="/filament/new">Create New Filament</a>
 </br>
 <div class="all-items">
     <% for (let i = 0; i < filaments.length; i++) { %>
         <div class="item">
         <a href="/filament/<%= filaments[i].id %>">
         <p>
-            <div class="item-details">
-                <%= filaments[i].color %>
-                <%= filaments[i].brand %>
-                <%= filaments[i].type %>
-        </div>
             <img src="<%= filaments[i].img %>">
     </br>
-            Stock: <%= filaments[i].stock %>kg
+        <div class="item-details">
+            <%= filaments[i].color %>
+            <%= filaments[i].brand %>
+            <%= filaments[i].type %>
+    </br>
+            <% if (filaments[i].stock > 0) { %>
+                Stock: <%= filaments[i].stock %>kg
+            <% } else { %>
+                Out of Stock
+            <% } %>
+        </div>
         </p>
         </a>
     </div>

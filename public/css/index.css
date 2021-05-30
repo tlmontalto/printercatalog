@@ -1,8 +1,19 @@
 body {
     background-color: powderblue;
     text-align: center;
-    /* display: flex;
-    flex-flow: column wrap; */
+    font-family: "monda", monospace;
+    display: flex;
+    flex-flow: column wrap;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#create-new {
+    border: 1px solid black;
+    padding: 1em;
+}
+#create-new:hover {
+    box-shadow: 10px 0 10px 0;
 }
 
 .all-items {
@@ -14,12 +25,15 @@ body {
 .item {
     background-color: white;
     border: 1px solid black;
-
+    border-radius: 5%;
     /* display: flex;
     flex-flow: column wrap; */
 
     margin: 1em;
     padding: 1em;
+}
+.item:hover {
+    box-shadow: 10px 0 10px 0;
 }
 
 .item-details {
@@ -30,6 +44,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 
