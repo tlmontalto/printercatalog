@@ -17,11 +17,13 @@
 </br>
         <img src="<%= filament.img %>">
 </br>
+        Stock: <%= filament.stock %>kg
+</br>
         Temperature: <%= filament.temperature %>
 </br>
         Speed: <%= filament.speed %>
 </br>
-        Link: <%= filament.link %>
+        Link: <a href="<%= filament.link %>">Buy More</a>
     </p>
     <form action="/filament/<%= filament.id %>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE">

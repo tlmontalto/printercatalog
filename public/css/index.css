@@ -1,0 +1,40 @@
+body {
+    background-color: powderblue;
+    text-align: center;
+    /* display: flex;
+    flex-flow: column wrap; */
+}
+
+.all-items {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.item {
+    background-color: white;
+    border: 1px solid black;
+
+    /* display: flex;
+    flex-flow: column wrap; */
+
+    margin: 1em;
+    padding: 1em;
+}
+
+.item-details {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    width: 250px;
+    height: 250px;
+    margin: 1em;
+}

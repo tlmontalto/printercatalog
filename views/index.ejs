@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Filament | Index</title>
 </head>
 <body>
     <h1>filament index here</h1>
     <a href="/filament/new">Create New Filament</a>
 </br>
+<div class="all-items">
     <% for (let i = 0; i < filaments.length; i++) { %>
-        <a href="/filament/<%= filaments[i].id %>">Details</a>
+        <div class="item">
+        <a href="/filament/<%= filaments[i].id %>">
         <p>
-            Type: <%= filaments[i].type %>
-</br>
-            Brand: <%= filaments[i].brand %>
-</br>
-            Color: <%= filaments[i].color %>
-</br>
+            <div class="item-details">
+                <%= filaments[i].color %>
+                <%= filaments[i].brand %>
+                <%= filaments[i].type %>
+        </div>
             <img src="<%= filaments[i].img %>">
-</br>
-            Temperature: <%= filaments[i].temperature %>
-</br>
-            Speed: <%= filaments[i].speed %>
-</br>
-            Link: <a href="<%= filaments[i].link %>">Buy More</a>
+    </br>
+            Stock: <%= filaments[i].stock %>kg
         </p>
+        </a>
+    </div>
     <% } %>
+</div>
 </body>
 </html>

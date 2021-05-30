@@ -5,6 +5,7 @@ const filamentSchema = new mongoose.Schema({
   brand: { type: String, required: true},
   color: { type: String, required: true},
   img: { type: String, required: false},
+  stock: { type: String, required: true},
   temperature: { type: String, required: false},
   speed: { type: String, required: false},
   link: { type: String, required: false}
