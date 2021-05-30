@@ -1,0 +1,29 @@
+body {
+    background-color: palevioletred;
+    font-family: "Monda", monospace;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: relative;
+}
+
+form {
+    background: rgb(218, 183, 108);
+    padding: 1em;
+    /* position:  */
+    width: 90%;
+    border-radius: 5%;
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+}
+
+.line {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: .25em 0;
+}
+
+/* input {
+    margin: 0 1em;
+} */

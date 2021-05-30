@@ -1,11 +1,23 @@
 body {
     background-color: powderblue;
     text-align: center;
-    font-family: "monda", monospace;
+    font-family: "Monda", monospace;
     display: flex;
     flex-flow: column wrap;
     /* justify-content: center; */
     align-items: center;
+    /* position: relative; */
+}
+
+header {
+    position: fixed;
+    background: black;
+    color: white;
+}
+
+main {
+    position: absolute;
+    top: 10%;
 }
 
 #create-new {

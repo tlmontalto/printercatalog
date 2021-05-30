@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/new.css">
     <title> Create New Filament</title>
 </head>
 <body>
+    <header>
+        <%- include ('./partials/header.ejs') %>
+    </header>
     <h1>Add New Filament:</h1>
     <form action="/filament", method="POST">
-        Type: <input type="text" name="type" id="type">
-</br>
-        Brand: <input type="text" name="brand" id="brand">
-</br>
-        Color: <input type="text" name="color" id="color">
-</br>
-        Image Link: <input type="text" name="img" id="img">
-</br>
-        Temperature: <input type="text" name="temperature" id="temperature">
-</br>
-        Speed: <input type="text" name="speed" id="speed">
-</br>
-        Shop Link: <input type="text" name="link" id="link"> 
-<br>
+        <div class="line">Type: <input type="text" name="type" id="type"></div>
+        <div class="line">Brand: <input type="text" name="brand" id="brand"></div>
+        <div class="line">Color: <input type="text" name="color" id="color"></div>
+        <div class="line">Image Link: <input type="text" name="img" id="img"></div>
+        <div class="line">Stock: <input type="text" name="stock" id="stock"></div>
+        <div class="line">Temperature: <input type="text" name="temperature" id="temperature"></div>
+        <div class="line">Speed: <input type="text" name="speed" id="speed"></div>
+        <div class="line">Shop Link: <input type="text" name="link" id="link"></div>
         <input type="submit" value="Add Filament">
       </form>
-      <a href="/filament">Back</a>
+      <a href="/filament">Cancel</a>
 </body>
 </html>

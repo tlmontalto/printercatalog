@@ -7,6 +7,9 @@
     <title>Display Page</title>
 </head>
 <body>
+        <header>
+                <%- include ('./partials/header.ejs') %>
+        </header>
     <a href="/filament/<%= filament.id %>/edit">Edit Filament</a>
     <p>
         Type: <%= filament.type %>
@@ -15,10 +18,15 @@
 </br>
         Color: <%= filament.color %>
 </br>
+        <% if (filament.stock > 0) { %>
+                Stock: <%= filament.stock %>kg
+        <% } else { %>
+                Out of Stock
+        <% } %>
+</br>
         <img src="<%= filament.img %>">
 </br>
-        Stock: <%= filament.stock %>kg
-</br>
+
         Temperature: <%= filament.temperature %>
 </br>
         Speed: <%= filament.speed %>
