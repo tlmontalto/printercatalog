@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const db = mongoose.connection;
+const session = require('express-session');
 
 require('dotenv').config()
 
@@ -23,6 +24,12 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+app.use(session({
+    secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
+    resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
+    saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
+}));
+
 // Mongoose Middleware
 mongoose.connect(MONGODB_URI, {
 useNewUrlParser: true,
@@ -39,6 +46,9 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // open the connection to mongo
 db.on('open' , ()=>{});
+
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
 
 const filamentController = require('./controllers/filament.js');
 app.use(filamentController);
