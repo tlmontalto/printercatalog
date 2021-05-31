@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/show.css">
     <title>Display Page</title>
 </head>
 <body>
         <header>
                 <%- include ('./partials/header.ejs') %>
         </header>
+        <main>
     <a href="/filament/<%= filament.id %>/edit">Edit Filament</a>
     <p>
         Type: <%= filament.type %>
@@ -37,5 +40,6 @@
         <input type="submit" value="DELETE">
       </form>
     <a href="/filament">Back</a>
+        </main>
 </body>
 </html>
