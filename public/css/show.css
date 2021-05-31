@@ -1,5 +1,8 @@
 body {
     background-color: white;
+    font-family: "Monda", monospace;
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -22,7 +25,8 @@ main {
     left: 5%;
     right: 5%;
     /* display: flex; */
-    background: rgb(218, 183, 108);
+    /* background: rgb(218, 183, 108); */
+    border: 1px solid gray;
     /* border-radius: 5%; */
     padding: 1em;
 }

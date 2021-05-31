@@ -27,7 +27,8 @@ main {
     top: 10%;
     left: 5%;
     right: 5%;
-    /* display: flex; */
+    /* display: flex;
+    flex-flow: column nowrap; */
     background: rgb(218, 183, 108);
     border-radius: 5%;
     padding: 1em;
@@ -37,17 +38,16 @@ main {
 form {
     padding: 1em;
     font-size: 18px;
-    /* position:  */
     display: flex;
     flex-flow: column wrap;
 }
 
-/* .line {
+.line {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     margin: .25em 0;
-} */
+}
 
 /* input {
     margin: 0 1em;
