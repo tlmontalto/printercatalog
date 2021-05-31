@@ -40,6 +40,12 @@ db.on('open' , ()=>{});
 
 const Filament = require('./models/filament.js')
 
+
+// Home Redirect
+app.get(`/`, (req, res) => {
+  res.redirect(`/filament`);
+});
+
 // Index
 app.get(`/filament`, (req, res) => {
     Filament.find({}, (error, allFilament) => {
@@ -47,7 +53,7 @@ app.get(`/filament`, (req, res) => {
         filaments: allFilament
       });
     });
-  });
+});
 
 // New Entry Page
 app.get(`/filament/new`, (req, res) => {
