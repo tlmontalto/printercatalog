@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const db = mongoose.connection;
 
+require('dotenv').config()
+
 const PORT = process.env.PORT || 3000;
 
 // Database
@@ -38,65 +40,8 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // open the connection to mongo
 db.on('open' , ()=>{});
 
-const Filament = require('./models/filament.js')
-
-
-// Home Redirect
-app.get(`/`, (req, res) => {
-  res.redirect(`/filament`);
-});
-
-// Index
-app.get(`/filament`, (req, res) => {
-    Filament.find({}, (error, allFilament) => {
-      res.render('index.ejs', {
-        filaments: allFilament
-      });
-    });
-});
-
-// New Entry Page
-app.get(`/filament/new`, (req, res) => {
-    res.render(`new.ejs`);
-});
-
-// Create
-app.post(`/filament`, (req, res) => {
-    Filament.create(req.body, (error, createdFilament) => {
-        res.redirect('/filament');
-    });
-});
-
-// Display Page
-app.get(`/filament/:id`, (req, res) => {
-    Filament.findById(req.params.id, (error, showFilament) => {
-        res.render('show.ejs', {
-          filament: showFilament
-        });
-    });
-});
-
-// Edit
-app.get(`/filament/:id/edit`, (req, res) => {
-    Filament.findById(req.params.id, (error, foundFilament) => {
-      res.render('edit.ejs', {
-        filament: foundFilament
-      });
-    });
-});
-
-// Put Edits
-app.put(`/filament/:id`, (req, res) => {
-    Filament.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedFilament) => {
-        res.redirect('/filament');
-})});
-
-// Delete
-app.delete('/filament/:id', (req, res) => {
-    Filament.findByIdAndRemove(req.params.id, (error, foundFilament) => {
-      res.redirect('/filament');
-    });
-  });
+const filamentController = require('./controllers/filament.js');
+app.use(filamentController);
 
 // Listen
 app.listen(PORT, () => {
