@@ -12,6 +12,7 @@
     <header>
         <%- include ('./partials/header.ejs') %>
     </header>
+    <main>
     <h1>Add New Filament:</h1>
     <form action="/filament", method="POST">
         <div class="line">Type: <input type="text" name="type" id="type"></div>
@@ -25,5 +26,6 @@
         <input type="submit" value="Add Filament">
       </form>
       <a href="/filament">Cancel</a>
+    </main>
 </body>
 </html>
