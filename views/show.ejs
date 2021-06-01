@@ -11,10 +11,11 @@
 <body>
         <header>
                 <%- include ('./partials/header.ejs') %>
+                <a href="/filament">Return to Index</a>
         </header>
         <main>
-        <a href="/filament">Back</a>
 <div class=item>
+        <h2><%= filament.color %> <%= filament.brand %> <%= filament.type %></h2>
         <img src="<%= filament.img %>">
 </br>
 <div class="details">
@@ -26,8 +27,9 @@
         <% } else { %>
                 <p>Out of Stock</p>
         <% } %>
-        <p>Temperature: <%= filament.temperature %></p>
-        <p>Speed: <%= filament.speed %></p>
+        <p>Hotend Temperature: <%= filament.hotendTemperature %>°C</p>
+        <p>Bed Temperature: <%= filament.bedTemperature %>°C</p>
+        <p>Speed: <%= filament.speed %>mm/s</p>
         <p>Link: <a href="<%= filament.link %>" target="_blank">Purchase</a></p>
 </div>
 </div>

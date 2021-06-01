@@ -49,7 +49,7 @@ router.get(`/filament/:id/edit`, (req, res) => {
 // Put Edits
 router.put(`/filament/:id`, (req, res) => {
     Filament.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedFilament) => {
-        res.redirect('/filament');
+        res.redirect(`/filament/${req.params.id}`);
 })});
 
 // Delete
