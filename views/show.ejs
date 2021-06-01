@@ -14,8 +14,8 @@
                 <a href="/filament">Return to Index</a>
         </header>
         <main>
+        <h1 id="title"><%= filament.color %> <%= filament.brand %> <%= filament.type %></h1>
 <div class=item>
-        <h2><%= filament.color %> <%= filament.brand %> <%= filament.type %></h2>
         <img src="<%= filament.img %>">
 </br>
 <div class="details">
@@ -29,7 +29,9 @@
         <% } %>
         <p>Hotend Temperature: <%= filament.hotendTemperature %>°C</p>
         <p>Bed Temperature: <%= filament.bedTemperature %>°C</p>
-        <p>Speed: <%= filament.speed %>mm/s</p>
+        <p>Print Speed: <%= filament.speed %>mm/s</p>
+        <p>Retraction Distance: <%= filament.retractionDistance %>mm</p>
+        <p>Retraction Speed: <%= filament.retractionSpeed %>mm/s</p>
         <p>Link: <a href="<%= filament.link %>" target="_blank">Purchase</a></p>
 </div>
 </div>

@@ -40,11 +40,17 @@ main {
     padding: 1em;
 }
 
+#title {
+    text-align: center;
+    font-size: 24px;
+}
+
 .item {
     border: 1px solid pink;
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    /* align-content: center; */
+    /* align-items: center; */
     /* width: 100%; */
 }
 
@@ -72,16 +78,23 @@ img {
 @media (min-width: 500px) {
     .item {
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
+        /* padding: 2em; */
         align-items: center;
+        justify-content: space-around;
     }
-    /* .details { */
-        /* display: flex; */
-        /* justify-content: center; */
+    .details {
+        width: 50%;
+        display: flex;
+        /* flex-flow: row wrap; */
+        justify-content: center;
         /* align-items: center; */
-    /* } */
+        /* padding: 1em; */
+    }
 
     img {
-        width: 400px;
+        width: 35%;
+        max-width: 500px;
+        /* padding: 1em; */
     }
 }

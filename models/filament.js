@@ -8,6 +8,8 @@ const filamentSchema = new mongoose.Schema({
   img: { type: String, required: false},
   hotendTemperature: { type: String, required: false},
   bedTemperature: { type: String, required: false},
+  retractionDistance: { type: String, required: false},
+  retractionSpeed: { type: String, required: false},
   speed: { type: String, required: false},
   link: { type: String, required: false}
 });
