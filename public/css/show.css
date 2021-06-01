@@ -31,7 +31,41 @@ main {
     padding: 1em;
 }
 
+.item {
+    border: 1px solid pink;
+
+}
+
+.details {
+    border: 1px solid blue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
 img {
     width: 250px;
     /* height:250px; */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 500px) {
+    .item {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    /* .details { */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    /* } */
+
+    img {
+        width: 400px;
+    }
 }
