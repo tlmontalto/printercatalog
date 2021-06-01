@@ -19,20 +19,20 @@
         <img src="<%= filament.img %>">
 </br>
 <div class="details">
-        <p>Type: <%= filament.type %></p>
-        <p>Brand: <%= filament.brand %></p>
-        <p>Color: <%= filament.color %></p>
+        <p class="line">Type: <%= filament.type %></p>
+        <p class="line">Brand: <%= filament.brand %></p>
+        <p class="line">Color: <%= filament.color %></p>
         <% if (filament.stock > 0) { %>
-                <p>Stock: <%= filament.stock %>kg</p>
+                <p class="line">Stock: <%= filament.stock %>kg</p>
         <% } else { %>
-                <p>Out of Stock</p>
+                <p class="line">Out of Stock</p>
         <% } %>
-        <p>Hotend Temperature: <%= filament.hotendTemperature %>°C</p>
-        <p>Bed Temperature: <%= filament.bedTemperature %>°C</p>
-        <p>Print Speed: <%= filament.speed %>mm/s</p>
-        <p>Retraction Distance: <%= filament.retractionDistance %>mm</p>
-        <p>Retraction Speed: <%= filament.retractionSpeed %>mm/s</p>
-        <p>Link: <a href="<%= filament.link %>" target="_blank">Purchase</a></p>
+        <p class="line">Hotend Temperature: <%= filament.hotendTemperature %>°C</p>
+        <p class="line">Bed Temperature: <%= filament.bedTemperature %>°C</p>
+        <p class="line">Print Speed: <%= filament.speed %>mm/s</p>
+        <p class="line">Retraction Distance: <%= filament.retractionDistance %>mm</p>
+        <p class="line">Retraction Speed: <%= filament.retractionSpeed %>mm/s</p>
+        <p class="line"><a href="<%= filament.link %>" target="_blank">Purchase</a></p>
 </div>
 </div>
 <div class="buttons">

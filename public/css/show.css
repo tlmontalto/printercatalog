@@ -10,7 +10,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 8%;
+    height: 10%;
     text-align: center;
     background: black;
     color: white;
@@ -19,22 +19,20 @@ header {
 header a {
     float: left;
     color: white;
-    /* text-decoration: none; */
     position: relative;
     bottom: .5em;
     left: .5em;
-    /* padding: 1em; */
 }
 
 main {
     position: absolute;
     /* height: 70%; */
     /* width: 80%; */
-    top: 10%;
+    top: 12%;
     left: 5%;
     right: 5%;
     /* display: flex; */
-    /* background: rgb(218, 183, 108); */
+    background: powderblue;
     border: 1px solid gray;
     /* border-radius: 5%; */
     padding: 1em;
@@ -46,22 +44,24 @@ main {
 }
 
 .item {
-    border: 1px solid pink;
+    background-color: white;
+    border: 1px solid black;
     display: flex;
     flex-flow: column wrap;
     /* align-content: center; */
-    /* align-items: center; */
+    align-items: center;
+    border-radius: 5%;
     /* width: 100%; */
 }
 
 .details {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-p {
+.line {
     margin: .5em 1em;
 }
 
@@ -73,6 +73,7 @@ img {
 .buttons {
     display: flex;
     justify-content: space-around;
+    padding: .5em 0;
 }
 
 @media (min-width: 500px) {
