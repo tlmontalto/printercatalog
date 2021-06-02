@@ -47,11 +47,14 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // open the connection to mongo
 db.on('open' , ()=>{});
 
-const userController = require('./controllers/users_controller.js')
-app.use('/users', userController)
-
 const filamentController = require('./controllers/filament.js');
 app.use(filamentController);
+
+const userController = require('./controllers/users_controller.js');
+app.use('/users', userController);
+
+const sessionsController = require('./controllers/sessions_controller.js');
+app.use('/sessions', sessionsController);
 
 // Listen
 app.listen(PORT, () => {

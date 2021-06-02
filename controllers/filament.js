@@ -11,14 +11,16 @@ router.get(`/`, (req, res) => {
 router.get(`/filament`, (req, res) => {
     Filament.find({}, (error, allFilament) => {
     res.render('index.ejs', {
-        filaments: allFilament
+        currentUser: req.session.currentUser
     });
     });
 });
 
 // New Entry Page
 router.get(`/filament/new`, (req, res) => {
-    res.render(`new.ejs`);
+    res.render(`new.ejs`, {
+        currentUser: req.session.currentUser
+    });
 });
 
 // Create
@@ -32,7 +34,7 @@ router.post(`/filament`, (req, res) => {
 router.get(`/filament/:id`, (req, res) => {
     Filament.findById(req.params.id, (error, showFilament) => {
         res.render('show.ejs', {
-        filament: showFilament
+            currentUser: req.session.currentUser
         });
     });
 });
@@ -41,7 +43,7 @@ router.get(`/filament/:id`, (req, res) => {
 router.get(`/filament/:id/edit`, (req, res) => {
     Filament.findById(req.params.id, (error, foundFilament) => {
     res.render('edit.ejs', {
-        filament: foundFilament
+        currentUser: req.session.currentUser
     });
     });
 });
