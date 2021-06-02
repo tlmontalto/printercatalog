@@ -1,5 +1,4 @@
 body {
-    background-color: powderblue;
     text-align: center;
     font-family: "Monda", monospace;
     display: flex;
@@ -10,31 +9,67 @@ body {
     /* align-items: center; */
     /* position: relative; */
 }
-
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 10%;
-    background: black;
-    color: white;
+    height: 13%;
+    background: rgb(50, 98, 126);
+    /* color: black; */
     z-index: 2;
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+    /* justify-content: center; */
+}
+
+#printer-catalog {
+    /* color: #FFFFFF; */
+    /* display: flex; */
+    /* justify-content: center; */
+    text-align: center;
+    /* position: absolute; */
+    top: 50%;
+    /* margin: 0 */
+}
+
+#username {
+    /* color: #FFFFFF; */
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    margin: 0;
+}
+
+#log-out {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    margin: 0;
+}
+
+#create-new {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: .25em;
+    background-color: #a0a0a0;
 }
 
 main {
+    color: white;
+    background-color: rgb(0, 0, 0);
     position: absolute;
-    top: 8%;
+    top: 10%;
     left: 0;
     /* height: 80%; */
     width: 100%;
     display: flex;
     flex-flow: column wrap;
-}
-
-#create-new {
-    border: 1px solid black;
-    padding: 1em;
 }
 
 
@@ -82,14 +117,14 @@ img {
 
     #create-new {
         width: 30%;
-        position: relative;
+        position: fixed;
         left: 35%;
     }
     #create-new:hover {
-        box-shadow: 10px 0 10px 0;
+        box-shadow: 10px 0 10px 0 rgb(50, 98, 126);
     }
 
     .item:hover {
-        box-shadow: 10px 0 10px 0;
+        box-shadow: 10px 0 10px 0 rgb(50, 98, 126);
     }
 }

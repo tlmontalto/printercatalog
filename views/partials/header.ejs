@@ -1,1 +1,10 @@
-<p id="printer-catalog">3D Printer Catalog</p>
+<h2 id="printer-catalog">3D Printer Catalog</h2>
+<% if (currentUser) { %>
+<p id="username">Welcome, <%= currentUser.username %></p>
+    <form action="/sessions?_method=DELETE" method="POST">
+    <input id="log-out" type="submit" value="Log Out" class="btn-small red" />
+    </form>
+<% } else { %>
+<a id="sign-up" href="/users/new">Sign Up</a>
+<a id="login" href="/sessions/new">Log In</a>
+<% } %>
