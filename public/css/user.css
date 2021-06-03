@@ -1,11 +1,9 @@
 body {
+    /* background-color: white; */
     font-family: "Monda", monospace;
     width: 100%;
     height: 100%;
-    background-color: rgb(36, 36, 36);
-    /* display: flex; */
-    /* flex-flow: column wrap; */
-    /* align-items: center; */
+    background-color: rgb(34, 34, 34);
 }
 
 header {
@@ -35,30 +33,7 @@ header {
     top: 4%;
 }
 
-#username {
-    /* color: #FFFFFF; */
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    margin: 0;
-}
-
-#log-out {
-    background-color: #5c5c5c;
-    color: white;
-    position: absolute;
-    top: 2%;
-    right: 1%;
-    margin: 0;
-    font-size: initial;
-    width: initial;
-    height: initial;
-    /* border-radius: 5%; */
-    /* font-size: 12px; */
-    /* border: 1px solid white; */
-}
-
-#return-link {
+#login {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -72,57 +47,32 @@ header {
     text-align: center;
 }
 
-
 main {
     position: absolute;
-    /* height: 70%; */
+    /* height: 85%; */
     /* width: 80%; */
-    color: white;
-    top: 15%;
-    left: 5%;
-    right: 5%;
+    top: 12%;
+    left: 0;
+    right: 0;
     /* display: flex; */
-    /* background: white; */
+    background: rgb(34, 34, 34);
+    /* border: 1px solid gray; */
     /* border-radius: 5%; */
-    /* padding: 1em; */
-    /* border: 1px solid black; */
-    margin: 1%;
-}
-
-#edit {
-    margin: 0;
-    /* text-align: center; */
+    padding: 1em;
+    color: white;
 }
 
 .container {
-    background-color: white;
-    color: black;
+    border: 1px solid white;
     border-radius: 5%;
-    padding: 0 1em;
-    margin: .5em 0;
+    /* color: white; */
 }
 
 form {
     padding: 1em;
+    margin: .5em 0;
     font-size: 18px;
     /* position:  */
     display: flex;
     flex-flow: column wrap;
-}
-
-/* .line {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    margin: .25em 0;
-} */
-
-input {
-    height: 24px;
-    font-size: 18px;
-}
-
-#submit {
-    background-color: #bdbdbd;
-    height: 32px;
 }

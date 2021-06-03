@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/user.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <h2 id="printer-catalog">3D Printer Catalog</h2>
-        <a id="login" href="/sessions/new">Log In</a>
+        <a id="login" href="/sessions/new">Already a user? Click here to log in.</a>
     </header>
     <main>
-    <h1>Create Account</h1>
+    <h2 id="create">Create Account:</h2>
+    <div class="container">
     <form action="/users", method="POST">
         Username: <input type="text" name="username" id="username">
     </br>
@@ -20,6 +23,7 @@
     </br>
         <input type="submit" value="Create Account">
       </form>
+      </div>
     </main>
 </body>
 </html>
