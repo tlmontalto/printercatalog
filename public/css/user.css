@@ -76,3 +76,47 @@ form {
     display: flex;
     flex-flow: column wrap;
 }
+
+@media (min-width: 500px) {
+    header {
+        height: 10%;
+    }
+
+    #printer-catalog {
+        width: initial;
+        font-size: 48px;
+        left: 1%;
+        top: 0;
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    #username {
+        /* position: absolute; */
+        right: 8%;
+        left: 72%;
+
+    }
+    
+    #log-out {
+        top: 5%;
+    }
+    
+    #login {
+        /* top: 0; */
+        width: 26%;
+        bottom: 10%;
+        left: 72%;
+        border: 1px solid white;
+    }
+
+    #add-new {
+        padding: 1em;
+    }
+
+    main {
+        top: 11%;
+        left: 20%;
+        right: 20%;
+    }
+}

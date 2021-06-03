@@ -12,7 +12,7 @@
 <body>
         <header>
                 <h2 id="printer-catalog">Filament Catalog</h2>
-                <p id="username">Welcome, <%= currentUser.username %></p>
+                <p id="username"><%= currentUser.username %></p>
                 <form action="/sessions?_method=DELETE" method="POST">
                     <input id="log-out" type="submit" value="Log Out" class="btn-small red" />
                 </form>
