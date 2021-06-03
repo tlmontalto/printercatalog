@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h2 id="printer-catalog">3D Printer Catalog</h2>
+        <h2 id="printer-catalog">Filament Catalog</h2>
             <p id="username">Welcome, <%= currentUser.username %></p>
             <form action="/sessions?_method=DELETE" method="POST">
                 <input id="log-out" type="submit" value="Log Out" class="btn-small red" />
@@ -18,7 +18,7 @@
             <a id="create-new" href="/filament/new">Create New Filament</a>
     </header>
     <main>
-    <h1>Filament Index</h1>
+    <h1 id="index">Filament Index</h1>
 </br>
 <div class="all-items">
     <% for (let i = 0; i < filaments.length; i++) { %>

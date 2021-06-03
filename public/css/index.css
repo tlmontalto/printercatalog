@@ -16,6 +16,7 @@ header {
     width: 100%;
     height: 13%;
     background: rgb(50, 98, 126);
+    border-bottom: 5px solid #36302D;
     /* color: black; */
     z-index: 2;
     /* display: flex; */
@@ -27,10 +28,11 @@ header {
     /* color: #FFFFFF; */
     /* display: flex; */
     /* justify-content: center; */
+    width: 60%;
     text-align: center;
-    /* position: absolute; */
-    top: 50%;
-    /* margin: 0 */
+    position: absolute;
+    left: 20%;
+    top: 4%;
 }
 
 #username {
@@ -42,6 +44,7 @@ header {
 }
 
 #log-out {
+    background-color: #a0a0a0;
     position: absolute;
     top: 2%;
     right: 1%;
@@ -50,21 +53,20 @@ header {
 
 #create-new {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 3%;
+    left: 10%;
+    right: 10%;
     color: black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
     padding: .25em;
     background-color: #a0a0a0;
 }
 
 main {
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(29, 29, 29);
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: 0;
     /* height: 80%; */
     width: 100%;
@@ -72,11 +74,24 @@ main {
     flex-flow: column wrap;
 }
 
+#index {
+    /* border-bottom: 2px solid rgb(50, 98, 126); */
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 3%; */
+
+    /* padding: .5em 0; */
+    /* border: 1px solid white; */
+
+}
 
 .all-items {
     display: flex;
     flex-flow: column wrap;
-
+    /* margin: 0 auto; */
+    margin: 1em 0 0 0;
 }
 
 .item {

@@ -10,11 +10,16 @@
 </head>
 <body>
     <header>
-        <%- include ('./partials/header.ejs') %>
-        <a href="/filament">Return to Index</a>
+        <h2 id="printer-catalog">Filament Catalog</h2>
+        <p id="username">Welcome, <%= currentUser.username %></p>
+        <form action="/sessions?_method=DELETE" method="POST">
+            <input id="log-out" type="submit" value="Log Out" class="btn-small red" />
+        </form>
+        <button id="return"><a id="return-link" href="/filament">Return to Index</a></button>
     </header>
     <main>
     <h2>Add New Filament:</h2>
+    <div class="container">
     <form action="/filament", method="POST">
         Type: <input type="text" name="type" id="type">
         Brand: <input type="text" name="brand" id="brand">
@@ -28,8 +33,9 @@
         Retraction Speed (mm/s): <input type="text" name="retractionSpeed" id="retractionSpeed">
         Shop Link: <input type="text" name="link" id="link">
     </br>
-        <input type="submit" value="Add Filament">
+        <input id="add" type="submit" value="Add Filament">
       </form>
+      </div>
     </main>
 </body>
 </html>

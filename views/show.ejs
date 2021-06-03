@@ -10,10 +10,12 @@
 </head>
 <body>
         <header>
-                <div class=header-container>
-                <%- include ('./partials/header.ejs') %>
-                <a href="/filament">Return to Index</a>
-                </div>
+                <h2 id="printer-catalog">Filament Catalog</h2>
+                <p id="username">Welcome, <%= currentUser.username %></p>
+                <form action="/sessions?_method=DELETE" method="POST">
+                    <input id="log-out" type="submit" value="Log Out" class="btn-small red" />
+                </form>
+                <button id="return"><a id="return-link" href="/filament">Return to Index</a></button>
         </header>
         <main>
         <h1 id="title"><%= filament.color %> <%= filament.brand %> <%= filament.type %></h1>
