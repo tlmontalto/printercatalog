@@ -1,9 +1,14 @@
 body {
-    /* background-color: white; */
+    /* text-align: center; */
     font-family: "Monda", monospace;
+    display: flex;
+    flex-flow: column wrap;
     width: 100%;
     height: 100%;
     background-color: rgb(34, 34, 34);
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
 }
 
 header {
@@ -26,11 +31,13 @@ header {
     /* color: #FFFFFF; */
     /* display: flex; */
     /* justify-content: center; */
-    width: 60%;
+    font-size: 24px;
+    width: 100%;
     text-align: center;
     position: absolute;
-    left: 20%;
-    top: 4%;
+    left: 0;
+    top: 30%;
+    /* border: 1px solid black; */
 }
 
 #username {
@@ -47,8 +54,12 @@ header {
     position: absolute;
     top: 2%;
     right: 1%;
-    margin: 0;
+    /* margin: 0; */
+    font-size: 14px;
+    /* width: initial; */
+    /* height: initial; */
     /* border-radius: 5%; */
+    /* font-size: 12px; */
     /* border: 1px solid white; */
 }
 
@@ -119,16 +130,27 @@ img {
 
 .buttons {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: space-around;
     padding: .5em 0;
+    width: 100%;
 }
 #edit {
-    width: 30%;
+    width: 100%;
     /* height: 20%; */
+    border: 1px solid white;
+    background-color: #5c5c5c;
 }
 #edit-link {
     text-decoration: none;
     color: black;
+}
+
+#delete {
+    width: 100%;
+    border: 1px solid white;
+    background-color: #5c5c5c;
+    margin: .5em 0;
 }
 
 @media (min-width: 500px) {

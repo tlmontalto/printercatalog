@@ -100,12 +100,12 @@ main {
 
 .item {
     background-color: white;
-    /* border: 1px solid black; */
+    border: 5px solid #5c5c5c;
     border-radius: 5%;
     /* display: flex;
     flex-flow: column wrap; */
 
-    margin: 1em;
+    margin: .5em 1em;
     /* padding: 1em; */
 }
 
@@ -129,21 +129,59 @@ img {
 
 @media (min-width: 500px) {
 
+    header {
+        height: 10%;
+    }
+
+    #printer-catalog {
+        width: initial;
+        font-size: 48px;
+        left: 0;
+        top: 0;
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    #username {
+        /* position: absolute; */
+        right: 8%;
+        left: 72%;
+
+    }
+    
+    #log-out {
+        top: 5%;
+    }
+    
+    #create-new {
+        /* top: 0; */
+        width: 26%;
+        bottom: 4%;
+        left: 72%;
+        border: 1px solid white;
+    }
+
+    #create-new:hover {
+        box-shadow: 10px 0 10px 0 #4b0303;
+    }
+
+    main {
+        top: 9%;
+    }
+
     .all-items {
         flex-flow: row wrap;
         justify-content: center;
+        /* margin: 2em 0; */
     }
 
-    #create-new {
-        width: 30%;
-        position: fixed;
-        left: 35%;
-    }
-    #create-new:hover {
-        box-shadow: 10px 0 10px 0 rgb(50, 98, 126);
+    .item {
+        /* border-radius: 5%; */
+        margin: 1em;
+        padding: 1em;
     }
 
     .item:hover {
-        box-shadow: 10px 0 10px 0 rgb(50, 98, 126);
+        box-shadow: 10px 0 10px 0 #4b0303;
     }
 }
