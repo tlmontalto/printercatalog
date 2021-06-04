@@ -18,3 +18,5 @@ In the future, I'd like to implement Bootstrap to allow for easier style manipul
 As far as major changes, I hope to one day have filament as just a subsection of the catalog, and expand it to log/track the rest of my electronics and maker equiptment.
 
 Some of the pages don't transfer well to Safari on iPhone, I think due to the bottom nav bar affecting the positioning of other objects. I would like to look into and solve that problem.
+
+I'd also like to add a filter, where I can sort by color or stock or brand.
